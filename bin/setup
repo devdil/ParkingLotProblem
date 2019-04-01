@@ -1,0 +1,11 @@
+# Add script to:
+# * Install dependencies
+# * Build/Compile
+# * Run Test Suit to validate
+#
+# After this is run, bin/parking_lot
+# should Just Work.
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+
+pip install -r $DIR/../requirements.txt
+python -m unittest discover -s $DIR/../src/tests/ -p '*_test.py'
