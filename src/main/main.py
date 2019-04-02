@@ -6,7 +6,7 @@ def start(filename, interactive=False):
     commandcontroller = CommandLineController()
     if filename and path.exists(filename) and not interactive:
         commandcontroller.start_non_interactive(filename)
-    if interactive
+    if interactive:
         commandcontroller.start_interactive()
 
 if  __name__ == '__main__':
